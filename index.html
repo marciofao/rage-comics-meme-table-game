@@ -1,6 +1,11 @@
-
-<!-- saved from url=(0063)http://m2studios.orgfree.com/content/memes-drinking-game-table/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!--
+***********************
+Autor: Márcio Lopes Fão
+http://is.gd/marciofao
+***********************
+-->
+<html>
+<head>
 	<title>Memes Drinking Game Table</title>
 	<script type="text/javascript">
 		
@@ -89,95 +94,109 @@
 
 		</script>
 		<style type="text/css">
-			iframe{
-				display: none;
-				/*avoiding orgfree.com ads*/
-			}
-			#freewha{
-				display: none;
-			}
-			
-			#tbl1{
-				margin-left: auto;
-				height: 800px;
-				width: 1024px;
-				text-align: center;
-			}
-			#player{
-				border: 3px red solid;
-				height: 110px;
-				width: 110px;
-				position: absolute;
-				z-index: 3;
-				float: left;
-			}
-			#player2{
-				border: 3px green solid;
-				height: 104px;
-				width: 104px;
-				position: absolute;
-				z-index: 3;
-				float: left;
-			}
-			#player3{
-				border: 3px blue solid;
-				height: 98px;
-				width: 98px;
-				position: absolute;
-				z-index: 3;
-				float: left;
-			}
-			#player4{
-				border: 3px purple solid;
-				height: 92px;
-				width: 92px;
-				position: absolute;
-				z-index: 3;
-				float: left;
-			}
-		</style>
-	</head>
-	<body>
-		<!-- POPUP -->
-		<div id="popup" style=" position:fixed; width:100%; height:100%; background:url(bg.png); z-index:9999;">
-			
-			<div style="width:800px; height:460px; left:38%; margin-left:-303px; position:relative; top:60px;">
-				
-				<img src="./index_files/rainbow-bg-eyes-meme.jpg" alt="meme arcoiris">
-				
-				
-				<div id="fechar" style="width:43px; height:43px; position:absolute; top:0; right:200px; cursor:pointer;">
-					<img src="./index_files/fecha.png" title="Clique para fechar">
-				</div>
+		iframe{
+			display: none;
+			/*avoiding orgfree.com ads*/
+		}
+		#freewha{
+			display: none;
+		}
+		.modal{
+			position:fixed; 
+			width:100%; 
+			height:100%; 
+			background:url(bg.png); 
+			z-index:9999;
+		}
+		.modal.splash{
+			width:75%; 
+			height:auto; 
+			border-left: 25%;	
+			left:38%; 
+			margin-left:-303px;
+			position:relative; 
+			top:60px;
+		}
 
-				<img src="./index_files/meme_drink_game_online.jpg" alt="Memes Drinking game" style="position:absolute; top:50px; right:-410px">
-				
-			</div>
-			
-		</div>
+
+		#tbl1{
+			margin-left: auto;
+			height: 800px;
+			width: 1024px;
+			text-align: center;
+		}
+		#player{
+			border: 3px red solid;
+			height: 110px;
+			width: 110px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player2{
+			border: 3px green solid;
+			height: 104px;
+			width: 104px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player3{
+			border: 3px blue solid;
+			height: 98px;
+			width: 98px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player4{
+			border: 3px purple solid;
+			height: 92px;
+			width: 92px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<!-- POPUP -->
+	<div id="popup" class="modal">
+
 		
-		<script type="text/javascript" src="./index_files/jquery.min.js.download"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#fechar").click(function(){
-					$("#popup").fadeOut('slow');
-				});
-				
+
+			<img src="rainbow-bg-eyes-meme.jpg" alt="meme arcoiris" >
+
+
+			<div id="fechar" style="width:43px; height:43px; position:absolute; top:0; right:200px; cursor:pointer;">
+				<img .modal src="fecha.png" title="Clique para fechar"/>
+			</div>
+
+			<img src="meme_drink_game_online.jpg" alt="Memes Drinking game" style="position:absolute; top:50px; right:-410px">
+
+		
+	</div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fechar").click(function(){
+				$("#popup").fadeOut('slow');
 			});
-		</script>
-		<!-- POPUP -->
 
-		<img src="./index_files/meme_drinking_game_big.jpg" id="tbl1">
-		<div id="player" style="top: 703px; left: 128px;"></div>
-		<div id="player2" style="top: 706px; left: 131px;"></div>
-		<div id="player3" style="top: 712px; left: 134px;"></div>
-		<div id="player4" style="top: 715px; left: 137px;"></div>
-		<div>
-			<a href="http://m2studios.orgfree.com/content/memes-drinking-game-table/info.htm"><button>Sobre o Jogo</button></a>
-		</div>
+		});
+	</script>
+	<!-- POPUP -->
+
+	<img src="img/meme_drinking_game_big.jpg" id="tbl1"></img>
+	<div  id="player" style="top: 703px; left: 128px;"></div>
+	<div id="player2" style="top: 706px; left: 131px;"></div>
+	<div id="player3" style="top: 712px; left: 134px;"></div>
+	<div id="player4" style="top: 715px; left: 137px;"></div>
+	<div>
+		<a href="info.htm"><button>Sobre o Jogo</button></a>
+	</div>
 
 
-	
-<div style="text-align:right;position:fixed;bottom:3px;right:0px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="https://www.freewebhostingarea.com/" title="Free Web Hosting with PHP5 or PHP7"><img alt="Free Web Hosting" width="253" height="45" src="./index_files/poweredby.png" style="border-width: 0px;"></a></div>
-
-	<span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@1x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer; top: 368.986px; left: 729.566px;"></span></body></html>
+</body>
+</html>
