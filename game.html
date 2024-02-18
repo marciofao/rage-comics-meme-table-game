@@ -1,0 +1,201 @@
+<!--
+***********************
+Autor: Márcio Lopes Fão
+http://is.gd/marciofao
+***********************
+-->
+<html>
+<head>
+	<title>Rage comics Drinking Game</title>
+	<script type="text/javascript">
+		
+		
+
+		function move(){
+				//PEGAR POSICAO INICIAL DE TODOS OS PLAYERS:
+				//PLAYER1:
+				lati=document.getElementById('player').offsetLeft;
+				alti=document.getElementById('player').offsetTop;
+			    //PLAYER2:
+			    lati2=document.getElementById('player2').offsetLeft;
+			    alti2=document.getElementById('player2').offsetTop;
+				//PLAYER3:
+				lati3=document.getElementById('player3').offsetLeft;
+				alti3=document.getElementById('player3').offsetTop;
+				//PLAYER4:
+				lati4=document.getElementById('player4').offsetLeft;
+				alti4=document.getElementById('player4').offsetTop;
+				
+				lat=112;
+				alt=100;
+				switch(event.keyCode){
+					//player1: WASD
+					case 119:{//W
+						document.getElementById('player').style.top= (alti-alt) + 'px';
+					}break;
+					case 115:{//S
+						document.getElementById('player').style.top= (alti+alt) + 'px';
+					}break;
+					case 97:{//A
+						document.getElementById('player').style.left= (lati-lat) + 'px';
+					}break;
+					case 100:{//D
+						document.getElementById('player').style.left= (lati+lat) + 'px';
+					}break;
+					
+					//player2: TFGH
+					case 116:{//T
+						document.getElementById('player2').style.top= (alti2-alt) + 'px';
+					}break;
+					case 103:{//F
+						document.getElementById('player2').style.top= (alti2+alt) + 'px';
+					}break;
+					case 102:{//G
+						document.getElementById('player2').style.left= (lati2-lat) + 'px';
+					}break;
+					case 104:{//H
+						document.getElementById('player2').style.left= (lati2+lat) + 'px';
+					}break;
+					
+					//player3: IJKL
+					case 105:{//I
+						document.getElementById('player3').style.top= (alti3-alt) + 'px';
+					}break;
+					case 107:{//J
+						document.getElementById('player3').style.top= (alti3+alt) + 'px';
+					}break;
+					case 106:{//K
+						document.getElementById('player3').style.left= (lati3-lat) + 'px';
+					}break;
+					case 108:{//L
+						document.getElementById('player3').style.left= (lati3+lat) + 'px';
+					}break;
+					
+					//player4: ZXCV
+					case 122:{//Z
+						document.getElementById('player4').style.top= (alti4-alt) + 'px';
+					}break;
+					case 120:{//X
+						document.getElementById('player4').style.top= (alti4+alt) + 'px';
+					}break;
+					case 99:{//C
+						document.getElementById('player4').style.left= (lati4-lat) + 'px';
+					}break;
+					case 118:{//V
+						document.getElementById('player4').style.left= (lati4+lat) + 'px';
+					}break;
+				}
+				
+				console.log("O código da tecla pressionada foi: " + event.keyCode);
+			}
+
+			document.onkeypress = move;
+
+
+		</script>
+		<style type="text/css">
+		iframe{
+			display: none;
+			/*avoiding orgfree.com ads*/
+		}
+		#freewha{
+			display: none;
+		}
+		.modal{
+			position:fixed; 
+			width:100%; 
+			height:100%; 
+			background:url(bg.png); 
+			z-index:9999;
+		}
+		.modal.splash{
+			width:75%; 
+			height:auto; 
+			border-left: 25%;	
+			left:38%; 
+			margin-left:-303px;
+			position:relative; 
+			top:60px;
+		}
+
+
+		#tbl1{
+			margin-left: auto;
+			height: 800px;
+			width: 1024px;
+			text-align: center;
+		}
+		#player{
+			border: 3px red solid;
+			height: 110px;
+			width: 110px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player2{
+			border: 3px green solid;
+			height: 104px;
+			width: 104px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player3{
+			border: 3px blue solid;
+			height: 98px;
+			width: 98px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+		#player4{
+			border: 3px purple solid;
+			height: 92px;
+			width: 92px;
+			position: absolute;
+			z-index: 3;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<!-- POPUP -->
+	<!-- <div id="popup" class="modal">
+
+		
+
+			<img src="rainbow-bg-eyes-meme.jpg" alt="meme arcoiris" >
+
+
+			<div id="fechar" style="width:43px; height:43px; position:absolute; top:0; right:200px; cursor:pointer;">
+				<img .modal src="fecha.png" title="Clique para fechar"/>
+			</div>
+
+			<img src="meme_drink_game_online.jpg" alt="Memes Drinking game" style="position:absolute; top:50px; right:-410px">
+
+	</div> -->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fechar").click(function(){
+				$("#popup").fadeOut('slow');
+			});
+
+		});
+	</script>
+	<!-- POPUP -->
+
+	<img src="img/meme_drinking_game_big.jpg" id="tbl1"></img>
+	<div  id="player" style="top: 703px; left: 128px;"></div>
+	<div id="player2" style="top: 706px; left: 131px;"></div>
+	<div id="player3" style="top: 712px; left: 134px;"></div>
+	<div id="player4" style="top: 715px; left: 137px;"></div>
+	<div>
+		<a href="/"><button>Sobre o Jogo</button></a>
+	</div>
+
+
+</body>
+</html>
